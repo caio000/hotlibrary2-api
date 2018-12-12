@@ -6,6 +6,7 @@ use Yii;
 use yii\web\Response;
 use yii\filters\ContentNegotiator;
 use yii\filters\auth\HttpBearerAuth;
+use yii\filters\Cors;
 
 class ActiveController extends \yii\rest\ActiveController
 {
@@ -17,6 +18,9 @@ class ActiveController extends \yii\rest\ActiveController
               'formats' => [
                   'application/json' => Response::FORMAT_JSON,
               ],
+          ],
+          'corsFilter' => [
+            'class' => Cors::className(),
           ],
       ];
   }
