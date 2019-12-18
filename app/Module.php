@@ -10,6 +10,8 @@ class Module extends YiiModule
     {
         $this->controllerMap = [
             'users' => 'app\user\controllers\UsersController',
+            'cities' => 'app\cities\controllers\CityController',
+            'neighborhoods' => 'app\neighborhoods\controllers\NeighborhoodController',
             'states' => 'app\states\controllers\StatesController',
         ];
         parent::init();

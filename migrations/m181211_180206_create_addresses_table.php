@@ -15,7 +15,7 @@ class m181211_180206_create_addresses_table extends Migration
         $this->createTable('addresses', [
             'id' => $this->primaryKey(),
             'idZipcode' => $this->integer()->notNull(),
-            'publicPlaca' => $this->string(250),
+            'publicPlace' => $this->string(250),
             'number' => $this->smallInteger(),
         ]);
         $this->addForeignKey('fk_address_zipcode', 'addresses', 'idZipcode', 'zipcodes', 'id');
