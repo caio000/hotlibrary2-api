@@ -21,7 +21,7 @@ class UsersController extends \app\lib\yii\rest\ActiveController
         return $actions;
     }
 
-    public function actionCreate()
+    public function actionRegistration()
     {
         $connection = Yii::$app->db;
         $transaction = $connection->beginTransaction();
@@ -66,6 +66,7 @@ class UsersController extends \app\lib\yii\rest\ActiveController
 
             $transaction->commit();
         } catch (Exception $e) {
+            return $e;
             $transaction->rollBack();
         }
 
