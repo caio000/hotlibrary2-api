@@ -5,6 +5,7 @@ services:
   - mysql
 before_script:
   - "composer install"
+  - "mysql -e 'CREATE DATABASE hotlibrary;'"
   - "php yii migrate --interactive 0"
   - "php yii serve &"
 script:
