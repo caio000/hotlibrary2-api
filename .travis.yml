@@ -5,7 +5,7 @@ services:
   - mysql
 before_script:
   - "composer install"
-  - "php yii mongodb-migrate --interactive 0"
+  - "php yii migrate --interactive 0"
   - "php yii serve &"
 script:
   - "vendor/bin/codecept run"
