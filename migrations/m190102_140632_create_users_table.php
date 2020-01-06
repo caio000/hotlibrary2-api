@@ -19,7 +19,7 @@ class m190102_140632_create_users_table extends Migration
             'email' => $this->string()->notNull()->unique(),
             'password' => $this->string()->notNull(),
         ]);
-        $this->addForeignKey('fk_user_address', 'users', 'idAddress', 'Addresses', 'id');
+        $this->addForeignKey('fk_user_address', 'users', 'idAddress', 'addresses', 'id');
     }
 
     /**
